@@ -1,6 +1,11 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div
+      v-if="msg"
+      class="msg-cont">
+      22222
+    </div>
   </div>
 </template>
 
@@ -12,7 +17,7 @@ export default {
   },
   methods: {
     testClick() {
-      this.$emit('testClick')
+      this.$emit('test-click')
     }
   }
 }
