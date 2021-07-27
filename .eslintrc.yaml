@@ -1,0 +1,92 @@
+root: true
+env:
+  browser: true
+  es6: true
+  node: true
+extends:
+  - 'eslint:recommended'
+  - 'plugin:vue/recommended'
+globals: {}
+
+# https://eslint.vuejs.org/user-guide/#editor-integrations
+
+parser: "vue-eslint-parser"
+parserOptions:
+  parser: babel-eslint
+  ecmaVersion: 2020
+  sourceType: module
+plugins:
+  - vue # 支持.vue文件
+
+rules: 
+  # "off" or 0 - turn the rule off; 
+  # "warn" or 1 - turn the rule on as a warning (doesn't affect exit code); 
+  # "error" or 2 - turn the rule on as an error (exit code will be 1)
+  # 由于是后期才开始使用的eslint，会导致大量的错误警告，所以只能暂时先关闭一些校验，等后期慢慢的修正后再开启相关规则
+  
+  # https://cn.eslint.org/docs/rules/
+
+  eqeqeq: # 要求使用 === 和 !==
+    - 2
+    - always
+  no-undef: # 禁用未声明的变量，除非它们在 /*global */ 注释中被提到, 这里要关闭，因为使用了 webpack 的 DefinePlugin ProvidePlugin插件可以直接使用全局变量
+    - 0
+  no-useless-escape: # 禁用不必要的转义字符
+    - 0
+  block-spacing: # 在块的开头和结尾之前必须使用空格 { xxx }
+    - 2 
+    - always # 要求使用一个或多个空格
+  semi:
+    - 2
+    - never # 禁止在语句末尾使用分号
+  no-fallthrough:
+    - 0
+
+  # https://github.com/AlloyTeam/eslint-config-alloy/blob/master/config/rules/vue.json
+  # https://eslint.vuejs.org/rules/
+
+  vue/no-use-v-if-with-v-for: # 禁止在同一个元素上使用 v-if 和 v-for 指令
+    - 0
+  vue/require-prop-type-constructor: # props 的取值必须是基本类型的构造函数，而不是字符串
+    - 0
+  vue/no-unused-components: # 禁止定义在 components 中的组件未使用
+    - 0
+  vue/return-in-computed-property: # 计算属性必须有返回值
+    - 0
+  vue/no-mutating-props: # 禁止修改组件的 props
+    - 0
+  vue/max-len:
+    - 2
+    - 
+      code: 125 # js的非注释部的长度限制
+      tabWidth: 2
+      comments: 120 # js的注释部分 每一行的总长度，编辑器最左侧到代码最后一个位（包含空格）
+  vue/html-indent:
+    - 2
+    - 2 # 几个缩进
+    -
+      attribute: 1 # 属性与 < 之间的缩进，1: 一个缩进 
+      baseIndent: 1 # html标签顶格缩进（0表示与template标签对其,1表示一个缩进）
+      closeBracket: 0 # > 换行后 与 < 之间的缩进关系（设置了html-closing-bracket-newline后，当前属性无效）
+  vue/no-empty-component-block: # 不允许<template> <script> <style>块为空。
+    - 2
+  vue/no-unused-refs: # 不允许有未使用的ref  不生效！
+    - 2
+  vue/no-useless-mustaches:  # 不允许在{{}}中使用非变量，且会被 eslint --fix 自动修复
+    - 2
+  vue/no-useless-v-bind: # 禁止无用bind eg: <div :foo="'bar'"/> ,且会被 eslint --fix 自动修复
+    - 2 
+  vue/html-closing-bracket-newline: # 在标签的右括号 > 之前要求换行
+    - 0
+  vue/html-closing-bracket-spacing: # 在标签前后是否需要空格
+    - 2
+    - selfClosingTag: always # 总在自闭合标签 ` />` 前加空格
+  arrow-spacing: # 箭头函数 ()=>{}  ,且会被 eslint --fix 自动修复（vue/arrow-spacing不生效）
+    - 1
+  vue/attribute-hyphenation: # 开启属性连字符
+    - 2
+  vue/custom-event-name-casing: # 对自定义事件名称强制使用特定的大小写
+    - 2
+    - kebab-case
+  vue/no-v-html:
+    - 0
