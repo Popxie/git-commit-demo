@@ -1,16 +1,18 @@
-# [2.0.0](https://github.com/Popxie/git-commit-demo/compare/v1.2.0...v2.0.0) (2021-08-20)
+# [2.1.0](https://github.com/Popxie/git-commit-demo/compare/v2.0.0...v2.1.0) (2021-08-20)
 
+### Features
+
+- **08-20:** 模拟 user2 第一次开发 ([958f467](https://github.com/Popxie/git-commit-demo/commit/958f46746062d34c80340676c1eeb1249f3da522))
+
+# [2.0.0](https://github.com/Popxie/git-commit-demo/compare/v1.2.0...v2.0.0) (2021-08-20)
 
 ### Performance Improvements
 
-* **08-20:** 模拟性能优化 ([b53ab71](https://github.com/Popxie/git-commit-demo/commit/b53ab71bd28b097d3cb125d466b9433da72c24bd))
-
+- **08-20:** 模拟性能优化 ([b53ab71](https://github.com/Popxie/git-commit-demo/commit/b53ab71bd28b097d3cb125d466b9433da72c24bd))
 
 ### BREAKING CHANGES
 
-* **08-20:** 模拟:对项目进行了性能优化且发生了破坏性变更2
-
-
+- **08-20:** 模拟:对项目进行了性能优化且发生了破坏性变更 2
 
 # [1.2.0](https://github.com/Popxie/git-commit-demo/compare/v1.0.1...v1.2.0) (2021-08-20)
 
