@@ -1,12 +1,14 @@
 {
   "name": "hello",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --copy",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
+    "log0": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -17,6 +19,7 @@
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.31.0",
     "eslint-plugin-vue": "^7.14.0",
     "husky": "^7.0.1",
@@ -30,5 +33,10 @@
   ],
   "lint-staged": {
     "*.{js,vue}": "eslint --cache --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

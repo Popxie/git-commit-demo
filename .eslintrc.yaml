@@ -58,7 +58,7 @@ rules:
   vue/max-len:
     - 2
     - 
-      code: 125 # js的非注释部的长度限制
+      code: 130 # js的非注释部的长度限制
       tabWidth: 2
       comments: 120 # js的注释部分 每一行的总长度，编辑器最左侧到代码最后一个位（包含空格）
   vue/html-indent:
