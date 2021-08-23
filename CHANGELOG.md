@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/Popxie/git-commit-demo/compare/v2.1.0...v2.2.0) (2021-08-23)
+
+### Features
+
+- **08-23:** 模拟 user1 第 4 次开发(第 1 次暂存) ([9108420](https://github.com/Popxie/git-commit-demo/commit/91084204c9e7d61a7b0519064ac0b6491bbdefc3))
+- **08-23:** 模拟 user1 第 4 次开发(第 2 次暂存) ([1554f95](https://github.com/Popxie/git-commit-demo/commit/1554f95d8017c7445ca265af03ab5e80cd334afa))
+
 # [2.1.0](https://github.com/Popxie/git-commit-demo/compare/v2.0.0...v2.1.0) (2021-08-20)
 
 ### Features
