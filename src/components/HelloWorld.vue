@@ -4,7 +4,7 @@
     <div
       v-if="msg"
       class="msg-cont">
-      1234
+      123456
     </div>
   </div>
 </template>
